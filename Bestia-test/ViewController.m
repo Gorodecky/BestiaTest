@@ -47,16 +47,36 @@
     
     //Light
     CALayer* light = [CALayer layer];
-    light.frame = CGRectMake(173, 2953, 100, 100);
+    light.frame = CGRectMake(194, 2978, 50, 50);
     CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     animation.fromValue = [NSNumber numberWithFloat:0.0];
     animation.toValue = [NSNumber numberWithFloat:1.0];
     animation.duration = 0.5;
     animation.repeatDuration = HUGE_VALF;
     animation.autoreverses = YES;
+    
     [light addAnimation:animation forKey:@"opacity"];
     [mainLayer addSublayer:light];
     light.contents = (__bridge id)[UIImage imageNamed:@"Light.png"].CGImage;
+    
+    //Stick
+    CALayer* stick = [CALayer layer];
+    stick.frame = CGRectMake(0, 70, 100, 100);
+    CALayer* stick2 = [CALayer layer];
+    stick2.frame = CGRectMake(100, 2750, 100, 200);
+    [stick2 addSublayer:stick];
+    CABasicAnimation* animationStick = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animationStick.toValue = [NSNumber numberWithFloat:M_PI/10];
+    animationStick.fromValue = [NSNumber numberWithFloat:-M_PI/10];
+    animationStick.duration = 1;
+    
+    animationStick.repeatDuration = HUGE_VALF;
+    animationStick.autoreverses = YES;
+    
+    [stick2 addAnimation:animationStick forKey:@"rotationAnimation"];
+    
+    [mainLayer addSublayer:stick2];
+    stick.contents = (__bridge id)[UIImage imageNamed:@"Stick.png"].CGImage;
     
 }
 
