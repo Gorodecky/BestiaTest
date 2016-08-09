@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 
 @end

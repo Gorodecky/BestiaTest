@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "Utility.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDataSource,
+                                UICollectionViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray* albumImages;
+@property (strong, nonatomic) NSMutableArray* posterImages;
+
 
 @end
 
@@ -17,16 +23,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self createLayers];
+    
+    Utility* createArraysImages = [[Utility alloc] init];
+    [createArraysImages receivingImage];
+    
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
+    return 1;
+}
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString* identifier = @"collectionViewCell";
+    
+    
+    
+    
+}
+
+#pragma mark - Create Layers
+- (void) createLayers {
+    
+    CALayer* navLayer = [CALayer layer];
+    navLayer.frame = self.navigationBar.frame;
+    [self.navigationBar.layer addSublayer:navLayer];
+    navLayer.contents = (__bridge id)[UIImage imageNamed:@"Top.png"].CGImage;
+    
     //Main.jpg
     CALayer* mainLayer = [CALayer layer];
     mainLayer.frame = CGRectMake(0, 0, 375, 3670);
     [self.mainView.layer addSublayer:mainLayer];
+    
+    
     mainLayer.contents = (id)[UIImage imageNamed:@"Main.jpg"].CGImage;
     
     //News-wood.png
     CALayer* collectionViewLayer = [CALayer layer];
-    collectionViewLayer.frame = CGRectMake(0, 370, 375, 328);
-    [mainLayer addSublayer:collectionViewLayer];
+    collectionViewLayer.frame = CGRectMake(0,0,370,328);///(0, 370, 375, 328);
+    [self.collectionView.layer addSublayer:collectionViewLayer];
     collectionViewLayer.contents = (id)[UIImage imageNamed:@"News-wood.png"].CGImage;
     
     //Tmp-album-1.jpg
@@ -77,7 +117,7 @@
     
     [mainLayer addSublayer:stick2];
     stick.contents = (__bridge id)[UIImage imageNamed:@"Stick.png"].CGImage;
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

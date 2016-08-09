@@ -12,7 +12,6 @@
 		D5EAF5281D4F3B610087C5C0 /* Bestia_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF5261D4F3B610087C5C0 /* Bestia_test.xcdatamodeld */; };
 		D5EAF52B1D4F3B620087C5C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF52A1D4F3B620087C5C0 /* ViewController.m */; };
 		D5EAF52E1D4F3B620087C5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF52C1D4F3B620087C5C0 /* Main.storyboard */; };
-		D5EAF5301D4F3B620087C5C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF52F1D4F3B620087C5C0 /* Images.xcassets */; };
 		D5EAF5331D4F3B620087C5C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF5311D4F3B620087C5C0 /* LaunchScreen.xib */; };
 		D5EAF53F1D4F3B620087C5C0 /* Bestia_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EAF53E1D4F3B620087C5C0 /* Bestia_testTests.m */; };
 		D5EAF5521D4F3C5E0087C5C0 /* Light.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF5491D4F3C5E0087C5C0 /* Light.png */; };
@@ -27,6 +26,8 @@
 		D5EAF55E1D4F3C720087C5C0 /* Bt-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF55B1D4F3C720087C5C0 /* Bt-Back.png */; };
 		D5EAF55F1D4F3C720087C5C0 /* Bt-More.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF55C1D4F3C720087C5C0 /* Bt-More.png */; };
 		D5EAF5601D4F3C720087C5C0 /* Bt-Share.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EAF55D1D4F3C720087C5C0 /* Bt-Share.png */; };
+		D5F589CD1D552EB70087CD90 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F589CC1D552EB70087CD90 /* Images.m */; };
+		D5F808E11D59CE9400653030 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F808E01D59CE9400653030 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,6 @@
 		D5EAF5291D4F3B610087C5C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D5EAF52A1D4F3B620087C5C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D5EAF52D1D4F3B620087C5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D5EAF52F1D4F3B620087C5C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D5EAF5321D4F3B620087C5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D5EAF5381D4F3B620087C5C0 /* Bestia-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bestia-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EAF53D1D4F3B620087C5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +66,10 @@
 		D5EAF55B1D4F3C720087C5C0 /* Bt-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bt-Back.png"; sourceTree = "<group>"; };
 		D5EAF55C1D4F3C720087C5C0 /* Bt-More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bt-More.png"; sourceTree = "<group>"; };
 		D5EAF55D1D4F3C720087C5C0 /* Bt-Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bt-Share.png"; sourceTree = "<group>"; };
+		D5F589CB1D552EB70087CD90 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
+		D5F589CC1D552EB70087CD90 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
+		D5F808DF1D59CE9400653030 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		D5F808E01D59CE9400653030 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +117,12 @@
 				D5EAF5291D4F3B610087C5C0 /* ViewController.h */,
 				D5EAF52A1D4F3B620087C5C0 /* ViewController.m */,
 				D5EAF52C1D4F3B620087C5C0 /* Main.storyboard */,
-				D5EAF52F1D4F3B620087C5C0 /* Images.xcassets */,
 				D5EAF5311D4F3B620087C5C0 /* LaunchScreen.xib */,
 				D5EAF5261D4F3B610087C5C0 /* Bestia_test.xcdatamodeld */,
+				D5F589CB1D552EB70087CD90 /* Images.h */,
+				D5F589CC1D552EB70087CD90 /* Images.m */,
+				D5F808DF1D59CE9400653030 /* Utility.h */,
+				D5F808E01D59CE9400653030 /* Utility.m */,
 				D5EAF51F1D4F3B610087C5C0 /* Supporting Files */,
 			);
 			path = "Bestia-test";
@@ -259,7 +266,6 @@
 				D5EAF5601D4F3C720087C5C0 /* Bt-Share.png in Resources */,
 				D5EAF5551D4F3C5E0087C5C0 /* Stick.png in Resources */,
 				D5EAF55A1D4F3C5E0087C5C0 /* Top.png in Resources */,
-				D5EAF5301D4F3B620087C5C0 /* Images.xcassets in Resources */,
 				D5EAF5571D4F3C5E0087C5C0 /* Tmp-album-2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +286,9 @@
 			files = (
 				D5EAF5281D4F3B610087C5C0 /* Bestia_test.xcdatamodeld in Sources */,
 				D5EAF5251D4F3B610087C5C0 /* AppDelegate.m in Sources */,
+				D5F589CD1D552EB70087CD90 /* Images.m in Sources */,
 				D5EAF52B1D4F3B620087C5C0 /* ViewController.m in Sources */,
+				D5F808E11D59CE9400653030 /* Utility.m in Sources */,
 				D5EAF5221D4F3B610087C5C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +486,7 @@
 				D5EAF5441D4F3B620087C5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5EAF5451D4F3B620087C5C0 /* Build configuration list for PBXNativeTarget "Bestia-testTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +495,7 @@
 				D5EAF5471D4F3B620087C5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
