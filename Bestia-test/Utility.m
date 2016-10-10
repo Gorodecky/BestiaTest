@@ -13,8 +13,7 @@
 
 @interface Utility ()
 
-@property (strong, nonatomic) NSMutableArray* albumImages;
-@property (strong, nonatomic) NSMutableArray* posterImages;
+
 
 @end;
 
@@ -65,14 +64,26 @@
         for (Images* image in arrayImage) {
             
             //NSNumber* no = @(NO);
-            NSNumber* yes = [[NSNumber alloc] initWithBool:YES];
+            //NSNumber* yes = [[NSNumber alloc] initWithBool:YES];
+            //NSLog(@"%@", image);
             
-            
-            if (image.collection == yes) {
+            if (image.collection.boolValue == YES) {
+                
+                if (self.albumImages == nil) {
+                    
+                    self.albumImages = [NSMutableArray array];
+                    
+                }
                 
                 [self.albumImages addObject:image];
                 
             } else {
+                
+                if (self.posterImages == nil) {
+                    
+                    self.posterImages = [NSMutableArray array];
+                    
+                }
                 
                 [self.posterImages addObject:image];
             }
@@ -114,7 +125,7 @@
     
     BOOL result = 0;
     
-    NSData* dataImage = UIImageJPEGRepresentation(image, 1.0f);
+    NSData* dataImage = UIImageJPEGRepresentation(image, 1.0);
     
     if ([name length] == 0)  {
         
@@ -130,11 +141,12 @@
         
         return NO;
     }
-    
+    /*
     if ((newImage.name.length == 0) || (newImage.data = nil) || (newImage.collection = nil)) {
+        
         return  NO;
     }
-    
+    */
     newImage.name = name;
     newImage.data = dataImage;
     newImage.collection = boolean;

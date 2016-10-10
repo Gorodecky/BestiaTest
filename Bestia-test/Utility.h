@@ -11,6 +11,9 @@
 
 @interface Utility : NSObject
 
+@property (strong, nonatomic) NSMutableArray* albumImages;
+@property (strong, nonatomic) NSMutableArray* posterImages;
+
 + (NSManagedObjectContext*) managedObjectContext;
 
 - (void) checkTheAvailabilityOfTheCoreData;

@@ -16,20 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-EP-AMs">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-EP-AMs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="3670"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKv-mf-AF5">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="3670"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999973" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-je-Lo9">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-je-Lo9">
                                                 <rect key="frame" x="0.0" y="370" width="375" height="328"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="328" id="tOK-RM-hHw"/>
-                                                    <constraint firstAttribute="width" constant="375" id="wtg-Tk-2pU"/>
-                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kS4-HD-4QI">
-                                                    <size key="itemSize" width="192" height="288"/>
+                                                    <size key="itemSize" width="332" height="287"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -38,7 +34,7 @@
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="865-KS-4BT">
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="192" height="288"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="332" height="287"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
@@ -48,9 +44,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="BxF-je-Lo9" firstAttribute="leading" secondItem="OKv-mf-AF5" secondAttribute="leading" id="JAo-z2-3Dr"/>
                                             <constraint firstAttribute="height" constant="3670" id="LnF-6J-glz"/>
-                                            <constraint firstItem="BxF-je-Lo9" firstAttribute="top" secondItem="OKv-mf-AF5" secondAttribute="top" constant="370" id="N9L-yf-cpV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -77,6 +71,7 @@
                     <connections>
                         <outlet property="collectionView" destination="BxF-je-Lo9" id="JdV-3h-pk0"/>
                         <outlet property="mainView" destination="OKv-mf-AF5" id="isf-E7-p78"/>
+                        <outlet property="subView" destination="zfj-N6-suT" id="HKN-EJ-W5F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAc-S2-sPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
